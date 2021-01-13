@@ -1,2 +1,2 @@
-# p5.play-boilerplate
-Boiler plate for p5.play
+# Flappy Bird
+This is a Copy of Flappy bird
