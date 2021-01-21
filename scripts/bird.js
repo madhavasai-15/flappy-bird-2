@@ -5,6 +5,7 @@ class Bird{
         this.r = 40;
         this.yspeed = 3;
         this.jump = false;
+        this.image = loadImage("Images/bird.png");
     };
 
     jumping(){
@@ -12,6 +13,7 @@ class Bird{
             this.y = this.y + this.yspeed;
         }else if(this.jump === true){
             this.y = this.y - this.yspeed;
+            
         }
     }
 
@@ -20,8 +22,6 @@ class Bird{
     };
 
     show(){
-        fill(255);
-        ellipseMode(CENTER);
-        ellipse(this.x, this.y, this.r, this.r);
+        image(this.image, this.x, this.y, 51, 36);
     };
 }

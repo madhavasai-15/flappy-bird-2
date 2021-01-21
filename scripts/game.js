@@ -6,6 +6,7 @@ function Game(){
     }else {
         fill(0);
         text("Loading...", camera.position.x-30, camera.position.y-100);
+        ground.x = bird.x - 10;
     }
 
     if(frameCount % 10 === 0 && bird.jump === true){
@@ -33,4 +34,5 @@ function Game(){
 
     ground.show();
     ground.touch(bird);
+    
 };

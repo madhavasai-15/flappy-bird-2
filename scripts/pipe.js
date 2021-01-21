@@ -6,6 +6,8 @@ class Pipe{
         this.y2 = Math.round(random(75, 115));
         this.width = 80;
         this.height = 300;
+        this.up_Pipe = loadImage("Images/pipe1.png");
+        this.Down_Pipe = loadImage("Images/pipe2.png"); 
     };
 
     touching(player){
@@ -30,8 +32,12 @@ class Pipe{
     };
 
     show(){
-        fill(0, 255, 0);
-        rect(this.x1, this.y1, this.width, this.height);
-        rect(this.x2, this.y2, this.width, this.height);
+        imageMode(CENTER);
+        image(this.up_Pipe, this.x1, this.y1);
+        image(this.Down_Pipe, this.x2, this.y2);
+
+        //fill(0, 255, 0);
+        //rect(this.x1, this.y1, this.width, this.height);
+        //rect(this.x2, this.y2, this.width, this.height);
     };
 }

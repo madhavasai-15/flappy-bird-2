@@ -1,9 +1,10 @@
 class Ground{
     constructor(){
-        this.x = bird.x;
+        this.x = bird.x-10;
         this.y = 610;
         this.width = 400*2;
         this.height = 600/4;
+        this.image = loadImage("Images/ground.png");
     };
 
     touch(player){
@@ -13,11 +14,12 @@ class Ground{
     };
 
     update(){
-        this.x = bird.x;  
+        if(this.x < camera.position.x-width/2){
+            this.x = bird.x; 
+        }
     };
 
     show(){
-        fill(222, 216, 149);
-        rect(this.x, this.y, this.width, this.height);
+        image(this.image, this.x, this.y);
     };
 }

@@ -6,12 +6,16 @@ var pipe_X = 300;
 var ground;
 var gameState = 1;
 var gameFont;
+var game_overImg;
 
 var score = 0;
 var highest_score = 0;
 
 function preload(){
   gameFont = loadFont("Font.TTF");
+
+  board = loadImage("Images/Board.png");
+  game_overImg = loadImage("Images/game_over.png");
 };
 
 function setup() {
@@ -27,6 +31,7 @@ function draw() {
   background(112, 197, 206);
   textFont(gameFont);
   rectMode(CENTER);  
+  imageMode(CENTER);
   noStroke();
 
   bird.show();
