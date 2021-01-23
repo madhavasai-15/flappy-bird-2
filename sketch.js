@@ -8,6 +8,7 @@ var gameState = 1;
 var gameFont;
 var game_overImg;
 
+localStorage["highest_score"] = 0;
 var score = 0;
 var highest_score = 0;
 
@@ -43,6 +44,7 @@ function draw() {
     text("Click AnyWhere to start!", camera.position.x-80, camera.position.y-100);
   }else if(gameState === 2){
     Game();
+    text(localStorage["highest_score"], camera.position.x-80, camera.position.y-100);
   }else if(gameState === 3){
     End();
   }

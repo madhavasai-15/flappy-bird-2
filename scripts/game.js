@@ -24,8 +24,9 @@ function Game(){
         }
     }  
 
-    if(highest_score !== score){
+    if(score > highest_score){ 
         highest_score = score;
+        localStorage["highest_score"] = score;
     }
 
     fill(255);
